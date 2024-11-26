@@ -1,0 +1,18 @@
+<!--Tela de listagem dos agendamentos-->
+
+<app-lista-items
+  [title]="'Agendamentos'"
+  [primaryBtnText]="'Adicionar Agendamento'"
+  [secondaryBtnText]="'Voltar'"
+  (navigateEvent)="irParaCadastroAgendamento()"
+  [columns]="columns"
+  [dados]="agendamentos"
+  [placeholderText]="'Buscar agendamento'"
+  [routePath]="'/editar-agendamento'"
+  (excluirFn)="excluirAgendamento($event)"
+>
+<ng-template let-item>
+  <td>{{ item.data ? (item.data | date:'dd/MM/yyyy') : '' }}</td>
+
+</ng-template>
+</app-lista-items>

@@ -1,0 +1,64 @@
+<!--Tela para edição de uma hospital-->
+<app-header></app-header>
+
+<app-create createBtn="Salvar" cancelBtn="Cancelar" title="Editar Hospital" [routePath]="'/listahospitais'" (submit)="salvar()">
+  <form [formGroup]="createForm" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+    <app-primary-input
+    formControlName="nome"
+    inputName="nome"
+    type="text"
+    label="Nome">
+    </app-primary-input>
+
+    <app-primary-input
+    formControlName="cnpj"
+    inputName="cnpj"
+    type="number"
+    label="CNPJ">
+    </app-primary-input>
+
+    <app-primary-input
+    formControlName="phone"
+    inputName="phone"
+    type="tel"
+    label="Telefone">
+    </app-primary-input>
+
+    <app-primary-input
+    formControlName="endereco"
+    inputName="endereco"
+    type="text"
+    label="Endereço">
+    </app-primary-input>
+
+    <app-primary-input
+    formControlName="postal_code"
+    inputName="postal_code"
+    type="number"
+    label="CEP">
+    </app-primary-input>
+
+    <app-primary-input
+    formControlName="city"
+    inputName="city"
+    type="text"
+    label="Cidade">
+    </app-primary-input>
+
+    <app-primary-input
+    formControlName="state"
+    inputName="state"
+    type="text"
+    label="Estado">
+    </app-primary-input>
+
+    <app-primary-input
+    formControlName="treatment"
+    inputName="treatment"
+    label="Tratamento"
+    [options]="['Quimioterapia', 'Radioterapia', 'Outro']">
+    </app-primary-input>
+
+  </form>
+</app-create>

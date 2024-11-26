@@ -1,0 +1,19 @@
+<app-header></app-header>
+
+<main class="flex items-center flex-col justify-center" fxLayout="column" fxLayoutAlign="center center" fxFlex="100%">
+  <div class="flex justify-center pt-12" fxLayout="column" fxLayoutAlign="center center">
+    <img ngSrc="./assets/logo 1.png" priority width="580" height="480" fxFlex="50%" class="logo"/>
+  </div>
+  <section class="flex justify-center items-center flex-col font-poppin pt-6" fxFlex="90%">
+    <div class="headline">
+      <h1 class="text-primary-blue font-bold pb-6 text-center title">Sistema de Cadastro e Gerenciamento</h1>
+    </div>
+    <div class="flex justify-center w-full">    
+      <button class="button-primary" (click)="navigate()">Entrar</button>
+    </div>
+  </section>
+</main>
+<div class="flex justify-center pb-10">
+  <span class="pr-1 pt-2 font-normal text-primary-gray text-sm text-center">Não é registrado ainda?</span> 
+  <span class="text-primary-blue font-semibold text-sm cursor-pointer pt-2 text-center"(click)="navigater()">Criar conta</span>
+</div>

@@ -1,0 +1,14 @@
+<!--Tela de listagem dos pacientes-->
+
+<app-lista-items
+  [title]="'Pacientes'"
+  [primaryBtnText]="'Adicionar Paciente'"
+  [secondaryBtnText]="'Voltar'"
+  (navigateEvent)="irParaCadastroPaciente()"
+  [columns]="columns"
+  [dados]="pacientes"
+  [placeholderText]="'Buscar paciente'"
+  [routePath]="'/editar-paciente'"
+  (excluirFn)="excluirPaciente($event)"
+></app-lista-items>
+

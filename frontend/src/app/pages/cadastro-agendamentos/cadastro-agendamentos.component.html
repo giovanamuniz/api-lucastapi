@@ -1,0 +1,43 @@
+<app-header></app-header>
+
+<app-create createBtn="Agendar" cancelBtn="Cancelar" title="Novo Agendamento" [routePath]="'/listaagendamentos'"(submit)="submit()">
+  <form [formGroup]="createForm" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 ">
+
+
+    <app-primary-input
+    formControlName="data"
+    inputName="data"
+    type="date"
+    label="Data">
+  </app-primary-input>
+
+    <app-primary-input
+    formControlName="horario"
+    inputName="horario"
+    type="time"
+    label="Horário">
+  </app-primary-input>
+
+  <app-primary-input
+  formControlName="profissional_id"
+  inputName="profissional_id"
+  type="number"
+  label="Profissional ID">
+</app-primary-input>
+
+<app-primary-input
+  formControlName="paciente_id"
+  inputName="paciente_id"
+  type="number"
+  label="Paciente ID">
+</app-primary-input>
+
+  <app-primary-input
+  formControlName="tipo"
+  inputName="tipo"
+  label="Tipo de Consulta"
+  [options]="['Consulta', 'Acompanhamento', 'Retorno', 'Outro']">
+  </app-primary-input>
+
+  </form>
+</app-create>

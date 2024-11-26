@@ -1,0 +1,9 @@
+# Ignorar arquivos de ambiente
+.env
+
+# Ignorar arquivos de dependências locais
+node_modules/
+
+# Ignorar logs e caches
+*.log
+.DS_Store

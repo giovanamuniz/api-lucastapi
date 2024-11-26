@@ -1,0 +1,13 @@
+<app-lista-items
+  [title]="'Hospitais'"
+  [primaryBtnText]="'Adicionar Hospital'"
+  [secondaryBtnText]="'Voltar'"
+  (navigateEvent)="irParaCadastroHospital()"
+  [columns]="columns"
+  [dados]="hospitais"
+  [placeholderText]="'Buscar hospital'"
+  [routePath]="'/editar-hospital'"
+  (excluirFn)="excluirHospital($event)"
+>
+
+</app-lista-items>

@@ -1,0 +1,59 @@
+
+.button-primary {
+  background-color: var(--primary-blue);
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 0.5rem 2rem;
+  border-radius: 0.375rem;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 300px;
+}
+
+.logo {
+  width: 100%;
+  max-width: 530px;
+  height: auto;
+}
+
+.title {
+  font-size: 1.75rem;
+}
+
+@media (max-width: 767px) {
+  .title {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .button-primary {
+    font-size: 1.25rem;
+    padding: 0.5rem 1.5rem;
+    width: 100%;
+  }
+
+  .logo {
+    max-width: 250px;
+    height: auto;
+  }
+
+  span {
+    font-size: 0.875rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 1.25rem;
+  }
+
+  .button-primary {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+  }
+
+  span {
+    font-size: 0.75rem;
+  }
+}

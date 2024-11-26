@@ -1,0 +1,59 @@
+.top-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #50BF78;
+  padding: 10px 20px;
+  height: 50px;
+  width: 100%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.logo-image {
+  height: 40px;
+  cursor: pointer;
+}
+
+.icon-image {
+  height: 30px;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .top-bar {
+    padding: 8px 16px;
+    height: 40px;
+  }
+
+  .logo-image {
+    height: 30px; 
+  }
+
+  .icon-image {
+    height: 25px; 
+  }
+}
+
+@media (max-width: 480px) {
+  .top-bar {
+    flex-direction: column; 
+    padding: 5px 10px;
+    height: auto;
+  }
+
+  .logo, .icon {
+    margin-bottom: 5px; 
+  }
+
+  .logo-image {
+    height: 28px; 
+  }
+
+  .icon-image {
+    height: 22px; 
+  }
+}

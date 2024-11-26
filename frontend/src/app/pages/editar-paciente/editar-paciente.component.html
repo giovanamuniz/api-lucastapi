@@ -1,0 +1,99 @@
+<!--Tela para edição de uma paciente-->
+<app-header></app-header>
+
+<app-create createBtn="Salvar" cancelBtn="Cancelar" title="Editar Paciente" [routePath]="'/listapacientes'" (submit)="salvar()">
+  <form [formGroup]="createForm" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+    <app-primary-input
+      formControlName="nome"
+      inputName="nome"
+      type="text"
+      label="Nome">
+    </app-primary-input>
+
+    <app-primary-input
+      formControlName="hospital_id"
+      inputName="hospital_id"
+      type="number"
+      label="Hospital ID">
+    </app-primary-input>
+
+    <app-primary-input
+      formControlName="medico_id"
+      inputName="medico_id"
+      type="number"
+      label="Profissional ID">
+    </app-primary-input>
+
+    <app-primary-input
+      formControlName="cpf"
+      inputName="cpf"
+      type="number"
+      label="CPF">
+    </app-primary-input>
+
+    <app-primary-input
+      formControlName="genero"
+      inputName="genero"
+      label="Gênero"
+      [options]="['Feminino', 'Masculino', 'Outro']">
+    </app-primary-input>
+
+    <app-primary-input
+      formControlName="data_nascimento"
+      inputName="data_nascimento"
+      type="date"
+      label="Data de Nascimento">
+    </app-primary-input>
+
+    <app-primary-input
+      formControlName="telefone"
+      inputName="telefone"
+      type="tel"
+      label="Telefone">
+    </app-primary-input>
+
+    <app-primary-input
+      formControlName="responsavel"
+      inputName="responsavel"
+      type="text"
+      label="Nome do Responsável">
+    </app-primary-input>
+
+    <app-primary-input
+      formControlName="telefone_responsavel"
+      inputName="telefone_responsavel"
+      type="tel"
+      label="Telefone do Responsável">
+    </app-primary-input>
+
+    <app-primary-input
+      formControlName="endereco"
+      inputName="endereco"
+      type="text"
+      label="Endereço">
+    </app-primary-input>
+
+    <app-primary-input
+      formControlName="cep"
+      inputName="cep"
+      type="number"
+      label="CEP">
+    </app-primary-input>
+
+    <app-primary-input
+      formControlName="cidade"
+      inputName="cidade"
+      type="text"
+      label="Cidade">
+    </app-primary-input>
+
+    <app-primary-input
+      formControlName="estado"
+      inputName="estado"
+      type="text"
+      label="Estado">
+    </app-primary-input>
+
+  </form>
+</app-create>

@@ -1,0 +1,20 @@
+<!--Create component-->
+<div class="flex justify-center items-center min-h-screen">
+  <main class="bg-white py-4 px-8 rounded-md mx-auto my-16 max-w-3xl sm:my-8 sm:px-4 sm:py-3">
+    <h1 class="text-secondary-green text-3xl font-semibold pb-2 sm:text-2xl text-left">{{ title }}</h1>
+    <ng-content></ng-content>
+    <div class="flex flex-col sm:flex-row justify-start mt-4 space-y-2 sm:space-y-0 sm:space-x-2">
+      <button
+        class="text-xl font-semibold text-white bg-secondary-green py-1 px-4 rounded-lg cursor-pointer drop-shadow-lg sm:text-lg"
+        (click)="submit()">
+        {{ createBtn }}
+      </button>
+      <button
+        class="text-xl font-semibold text-secondary-green bg-white border py-1 px-4 rounded-lg cursor-pointer drop-shadow-lg sm:text-lg"
+        (click)="navigate()">
+        {{ cancelBtn }}
+      </button>
+    </div>
+    
+  </main>
+</div>

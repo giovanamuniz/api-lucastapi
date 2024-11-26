@@ -1,0 +1,35 @@
+<!--Primary-input component-->
+<div class="input-wrapper flex flex-col">
+  <label [for]="inputName" class="mb-1">{{ label }}</label>
+
+  <ng-container *ngIf="!options; else selectInput">
+    <input
+      [attr.id]="inputName"
+      class="border border-border-gray py-2 pl-4 pr-12 cursor-pointer rounded-lg"
+      [type]="type"
+      [placeholder]="placeholder"
+      [(ngModel)]="value"
+      (input)="onInput($event)"
+    />
+  </ng-container>
+
+
+  <ng-template #selectInput>
+    <select
+      class="border border-border-gray py-2 pl-4 pr-12 cursor-pointer rounded-lg mb-4"
+      [(ngModel)]="value"
+      (change)="onOptionChange($event)"
+    >
+      <option *ngFor="let option of options" [value]="option">{{ option }}</option>
+    </select>
+
+    <input
+      *ngIf="showCustomInput"
+      type="text"
+      placeholder="Especifique"
+      class="border border-border-gray py-2 pl-4 cursor-pointer rounded-lg"
+      [(ngModel)]="value"
+      (input)="onInput($event)"
+    />
+  </ng-template>
+</div>

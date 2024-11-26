@@ -1,0 +1,12 @@
+<app-lista-items
+  [title]="'Profissionais'"
+  [primaryBtnText]="'Adicionar Profissional'"
+  [secondaryBtnText]="'Voltar'"
+  (navigateEvent)="irParaCadastroProfissional()"
+  [columns]="columns"
+  [dados]="profissionais"
+  [placeholderText]="'Buscar profissional'"
+  [routePath]="'/editar-profissional'"
+  (excluirFn)="excluirProfissional($event)"
+></app-lista-items>
+

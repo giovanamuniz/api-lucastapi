@@ -1,0 +1,71 @@
+<app-header></app-header>
+
+<app-create createBtn="Cadastrar" cancelBtn="Cancelar" title="Novo Profissional" [routePath]="'/listaprofissionais'" (submit)="submit()">
+  <form [formGroup]="createForm" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 ">
+
+
+    <app-primary-input
+    formControlName="nome"
+    inputName="nome"
+    type="text"
+    label="Nome">
+  </app-primary-input>
+
+
+  <app-primary-input
+  formControlName="cpf_cnpj"
+  inputName="cpf_cnpj"
+  type="text"
+  label="CPF/CNPJ">
+</app-primary-input>
+
+
+    <app-primary-input
+    formControlName="telefone"
+    inputName="telefone"
+    type="tel"
+    label="Telefone"
+    placeholder="">
+    </app-primary-input>
+
+    <app-primary-input
+    formControlName="especialidade"
+    inputName="especialidade"
+    type="text"
+    label="Especialidade">
+  </app-primary-input>
+
+    <app-primary-input
+    formControlName="endereco"
+    inputName="endereco"
+    type="text"
+    label="Endereço"
+    placeholder="">
+    </app-primary-input>
+
+    <app-primary-input
+    formControlName="cep"
+    inputName="cep"
+    type="number"
+    label="CEP"
+    placeholder="">
+    </app-primary-input>
+
+    <app-primary-input
+    formControlName="cidade"
+    inputName="cidade"
+    type="text"
+    label="Cidade"
+    placeholder="">
+    </app-primary-input>
+
+    <app-primary-input
+    formControlName="estado"
+    inputName="estado"
+    type="text"
+    label="Estado"
+    placeholder="">
+    </app-primary-input>
+
+  </form>
+</app-create>
